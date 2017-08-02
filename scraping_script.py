@@ -40,13 +40,13 @@ if pop_up_close_button:
 home_department_link = response.find_elements_by_xpath('//div[@id="mainNavigation"]/ul/li/a[contains(text(),"HOME")]')
 if home_department_link:
 	home_department_link[0].click()
-	sleep(15)
+	sleep(5)
 
 #selecting and  clicking the home decor department from the sub department list in the left side
 home_decor_link = response.find_elements_by_xpath('//div[@id="localNavigationContainer"]//ul[@id="firstNavSubCat"]/li//a[contains(text(),"Home Decor")]')
 if home_decor_link:
 	home_decor_link[0].click()
-	sleep(15)
+	sleep(5)
 
 #going to each pages using the next page button and collecting all the data
 next_page = response.find_elements_by_xpath('//div[@id="filters"]//a[@class="arrowRight arrowButton paginationSpacer"]')
@@ -72,7 +72,7 @@ while next_page:
 	next_page = response.find_elements_by_xpath('//div[@id="filters"]//a[@class="arrowRight arrowButton paginationSpacer"]')
 	if next_page:
 		next_page[0].click()
-		sleep(15)
+		sleep(5)
 #closing the database connetion
 db_client.close()
 #clocing the browser window
